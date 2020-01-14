@@ -67,7 +67,4 @@ The tracker is compatible with all objects detector provided in the Tensorflow [
 
 ## Citation
 
-If you find our work useful please cite
-´´´
-
-´´´
+**Coming soon...**
