@@ -21,7 +21,7 @@ if __name__ == "__main__":
     video_file = "data/MOT17-09-FRCNN-{}-{}.mp4".format(codec, scaling_factor)
 
     # offline detections for the example video
-    use_offline_detections = False
+    use_offline_detections = True
     detections_file = "data/det.txt"
     num_frames = 525  # number of frames in the example video (only needed for offline detections)
 
@@ -32,6 +32,14 @@ if __name__ == "__main__":
     tracker_iou_thres = 0.3
     det_conf_threshold = 0.8  # set to 0.5 for DPMv5 and to 0.9 for FRCNN
     state_thresholds = (0, 1, 10)
+
+    write_output_video = True
+
+    if write_output_video:
+        fps = 15.0
+        frame_shape = (1920, 1080)
+        fourcc = cv2.VideoWriter_fourcc("D","I","V","X")
+        writer = cv2.VideoWriter("tracker_output.avi", fourcc, fps, frame_shape, True)
 
     # When True you have to press 's' key to advance the video by one frame. If False the video just plays.
     step_wise = False
@@ -126,6 +134,10 @@ if __name__ == "__main__":
             1/tracker_baseline.last_predict_dt, 1/tracker_baseline.last_update_dt))
 
         frame_idx += 1
+
+        if write_output_video:
+            writer.write(frame)
+
         cv2.imshow("frame", frame)
 
         # handle key presses
@@ -147,4 +159,6 @@ if __name__ == "__main__":
                     break
 
     cap.release()
+    if write_output_video:
+        writer.release()
     cv2.destroyAllWindows()
