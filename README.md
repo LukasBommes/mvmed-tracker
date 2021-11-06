@@ -68,7 +68,7 @@ You might want to change the parameters in this script to see how they affect tr
 
 #### Changing the Object Detector
 
-The tracker is compatible with all objects detector provided in the Tensorflow [Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). Just download the detector you want to use from the model zoo provided in the TF repository and place it anywhere. Update the `detector_path` in the `track.py` script to point to the frozen inference graph file `*.pb` of the downloaded detector.
+The tracker is compatible with all objects detector provided in the [Object Detection API for Tensorflow 1](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Just download the detector you want to use from the model zoo provided in the TF repository and place it anywhere. Update the `detector_path` in the `track.py` script to point to the frozen inference graph file `*.pb` of the downloaded detector.
 
 ## Citation
 
@@ -77,8 +77,8 @@ If you use our work for academic research please cite
 ```
 @INPROCEEDINGS{Bommes.2020,
   author={L. {Bommes} and X. {Lin} and J. {Zhou}},
-  booktitle={2020 15th IEEE Conference on Industrial Electronics and Applications (ICIEA)}, 
-  title={MVmed: Fast Multi-Object Tracking in the Compressed Domain}, 
+  booktitle={2020 15th IEEE Conference on Industrial Electronics and Applications (ICIEA)},
+  title={MVmed: Fast Multi-Object Tracking in the Compressed Domain},
   year={2020},
   volume={},
   number={},

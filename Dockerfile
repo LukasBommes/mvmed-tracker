@@ -8,7 +8,7 @@ ENV HOME "/home"
 
 # Download and build sfmt-videocap from source
 RUN cd $HOME && \
-  git clone -b "v1.0.0" https://sfmt-auto:Ow36ODbBoSSezciC@github.com/LukasBommes/mv-extractor.git video_cap && \
+  git clone -b "v1.0.0" https://github.com/LukasBommes/mv-extractor.git video_cap && \
   cd video_cap && \
   chmod +x install.sh && \
   ./install.sh
@@ -133,3 +133,4 @@ RUN pip3 install -r /requirements.txt
 WORKDIR /mvmed_tracker
 
 CMD ["sh", "-c", "tail -f /dev/null"]
+
