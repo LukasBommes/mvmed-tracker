@@ -15,7 +15,7 @@ The code contains our MVmed tracker and a Faster R-CNN object detector. The dete
 Install [Docker](https://docs.docker.com/).
 Clone the repo to your machine
 ```
-git clone -b "v1.0.0" https://github.com/LukasBommes/mvmed-tracker.git mvmed_tracker
+git clone -b "v1.0.1" https://github.com/LukasBommes/mvmed-tracker.git mvmed_tracker
 ```
 Open a terminal inside the repo and build the docker container with the following command (note: this can take several hours)
 ```
